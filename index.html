@@ -25,10 +25,20 @@
         }
     </style>
 
-	<body>
+	<body onload="welcomeFunction(); document.body.style.backgroundColor='pink' "
+          onresize="document.body.style.backgroundColor='lightblue'"
+          
+          onkeydown="document.body.style.backgroundColor='white'"
+          onkeyup="document.body.style.backgroundColor='lightyellow'">
     <strong>  Intro 2 Inf Sys </strong> 
 
-		<p class = "centered"> 
+        <script>
+            function welcomeFunction() {
+                alert("Welcome!");
+            }
+        </script>
+        
+        <p class = "centered" onmouseover="document.querySelector('.centered').style.font='bold 20pt arial,serif'"> 
 				<em> 
                 Muhammed İzzettin OKTAY 
 				    <br> 
@@ -40,7 +50,7 @@
 			Evolution of Homo Species 
         </p>
 
-		<ul>
+		<ul id="unorderedL" onmouseover="document.getElementById('unorderedL).style.backgroundColor='purple'">
             <li> Homo Habilis (able man) </li>
             <li> Homo Erectus (upright man) </li>
             <li> Homo Neanderthalensis </li>
@@ -51,7 +61,8 @@
             </ul>
         </ul>
 		
-        <h1>
+        <h1 onmouseover="style.color='orange';style.backgroundColor='lightgreen'"
+            onmouseout="style.color='red';style.backgroundColor='white'">
             <strong> Human Evolution </strong>
         </h1>
         <p><img src="evolution-diagram.png"> </p>
@@ -70,7 +81,8 @@
         <p>
             This image is clickable, click on it and try.
             <a href="https://www.biologyonline.com/dictionary/homo-sapiens-sapiens">
-                    <img src="evolution-diagram.png">
+                    <img id="myImg" alt="Evolution diagram" onclick="alert(document.getElementById('myImg').alt)"
+                    src="evolution-diagram.png">
             </a>
         </p>
 
